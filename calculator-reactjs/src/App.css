@@ -1,0 +1,88 @@
+* {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 256px;
+  text-align: center;
+  border: 10px solid #dfe1e9;
+  background: #dfe1e9;
+  border-radius: 5px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+
+input {
+  height: 75px;
+  width: 249px;
+  background-color: #10111600;
+  border: 0px;
+  color: #000000;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+input:focus,
+input:active{
+  outline: none;
+}
+
+#del {
+  grid-column: 1/3;
+  grid-row: 1;
+  color: #262834;
+}
+
+#backspace {
+  color: #262834;
+}
+
+.result {
+  grid-column: 3/5;
+  grid-row: 5;
+  background: #6699FF;
+}
+
+.result:hover {
+  background-color: #3399FF;
+}
+
+.result:active {
+  background-color: #0099FF;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #c0c0c0;
+}
+
+button:active {
+  background-color: #a9a9a9;
+}
